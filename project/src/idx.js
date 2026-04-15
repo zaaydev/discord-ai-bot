@@ -3,8 +3,19 @@ import dotenv from "dotenv";
 import generate_answer_for_boss from "../lib/generate_answer.js";
 import start_daily_job from "../lib/daily_generation.js";
 import safeReply from "../helper/trim_length.js";
+import express from "express";
 
+const app = express();
+const PORT = process.env.PORT || 5000;
 dotenv.config(); // Loads TOKEN from .env into process.env
+
+app.get("/", (req, res) => {
+  res.send("BOT IS RUNNING");
+});
+
+app.listen(8000, () => {
+  console.log("SERVER RUNNING........");
+});
 
 // Create client (your bot instance) with required permissions (intents)
 // basically boiler plate setup for discord bot
