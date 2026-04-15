@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "start": "node src/idx.js",
+    "dev": "nodemon src/idx.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "@ai-sdk/google": "^3.0.63",
+    "ai": "^6.0.161",
+    "discord.js": "^14.26.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "node-cron": "^4.2.1",
+    "nodemon": "^3.1.14"
+  }
+}
